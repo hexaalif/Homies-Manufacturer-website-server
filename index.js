@@ -234,7 +234,7 @@ const run = async () => {
             const result = await productCollenction.deleteOne(filter);
             res.send(result);
         })
-        
+
         app.get('/admin/:email', async (req, res) => {
             const email = req.params.email;
             const user = await userCollenction.findOne({ email: email });
